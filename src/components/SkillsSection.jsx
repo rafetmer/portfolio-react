@@ -48,10 +48,17 @@ const categories = ["all", "backend", "frontend", "database", "devops"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
+  const [showAllSkills, setShowAllSkills] = useState(false);
 
   const filteredSkills = skills.filter(
     (skill) => activeCategory === "all" || skill.category === activeCategory
   );
+
+  const displayedSkills = showAllSkills || activeCategory !== "all" 
+    ? filteredSkills 
+    : filteredSkills.slice(0, 6);
+
+  const hasMoreSkills = activeCategory === "all" && filteredSkills.length > 6;
   
   return (
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
@@ -64,7 +71,10 @@ export const SkillsSection = () => {
           {categories.map((category, key) => (
             <button
               key={key}
-              onClick={() => setActiveCategory(category)}
+              onClick={() => {
+                setActiveCategory(category);
+                setShowAllSkills(false);
+              }}
               className={cn(
                 "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
                 activeCategory === category

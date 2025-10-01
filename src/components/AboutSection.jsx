@@ -16,7 +16,7 @@ export const AboutSection = () => {
     <section id="about" className="py-24 px-4 relative">
       {" "}
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center glass-title">
           <span className="text-glow">About </span> <span className="text-primary"> Me</span>
         </h2>
 
@@ -38,7 +38,7 @@ export const AboutSection = () => {
               landscape.
             </p>
 
-            <div className="flex flex-row sm:flex-row gap-4 pt-4 justify-center">
+            <div className="flex relative flex-row sm:flex-row gap-4 pt-4 justify-center text-font-">
               <a href="#contact" className="cosmic-button">
                 {" "}
                 Get In Touch
@@ -51,7 +51,7 @@ export const AboutSection = () => {
                   value="download"
                   onClick={downloadCvFile}
                 >
-                  Download CV <Download />
+                  <span className="flex items-center gap-2">Download CV <Download /> </span>
                 </button>
               </div>
             </div>

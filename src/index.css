@@ -129,6 +129,21 @@
   }
 }
 
+
+@utility glass-highlight {
+  @apply backdrop-blur-md bg-white/10 border border-white/20 rounded px-4 py-2 inline-block;
+  .dark & {
+    @apply bg-black/20 border-white/10;
+  }
+}
+
+@utility glass-title {
+  @apply backdrop-blur-lg bg-white/20 border border-white/30 rounded-lg px-6 py-3;
+  .dark & {
+    @apply bg-white/10 border-white/20;
+  }
+}
+
 @utility text-glow {
   @apply relative;
   text-shadow: 0 0 10px rgba(39, 39, 133, 0.5);
@@ -146,7 +161,7 @@
 }
 
 @utility cosmic-button {
-  @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium 
+  @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium
          transition-all duration-300 hover:shadow-[0_0_10px_rgba(39,39,133,0.5)]
          hover:scale-105 active:scale-95;
 }
