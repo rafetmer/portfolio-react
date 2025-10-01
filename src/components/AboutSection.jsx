@@ -1,4 +1,4 @@
-import { Briefcase, Code, User } from "lucide-react";
+import { Briefcase, Code, User, Download } from "lucide-react";
 
 
 const downloadCvFile = () => {
@@ -38,7 +38,7 @@ export const AboutSection = () => {
               landscape.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+            <div className="flex flex-row sm:flex-row gap-4 pt-4 justify-center">
               <a href="#contact" className="cosmic-button">
                 {" "}
                 Get In Touch
@@ -47,11 +47,11 @@ export const AboutSection = () => {
                 <button
                   id= "downloadCvBtn"
                   href=""
-                  className="glass-effect cosmic-button bg-secondary/30 hover:bg-secondary/50 text-primary"
+                  className="glass-effect cosmic-button"
                   value="download"
                   onClick={downloadCvFile}
                 >
-                  Download CV
+                  Download CV <Download />
                 </button>
               </div>
             </div>
