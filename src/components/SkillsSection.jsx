@@ -102,6 +102,7 @@ export const SkillsSection = () => {
             </div>
           ))}
         </div>
+          
       </div>
     </section>
   );
